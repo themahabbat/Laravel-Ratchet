@@ -9,7 +9,7 @@ use Ratchet\Server\IoServer;
 use Ratchet\WebSocket\WsServer;
 
 
-class RunServer extends Command
+class RunWebsocketsServer extends Command
 {
     /**
      * The name and signature of the console command.
@@ -48,7 +48,7 @@ class RunServer extends Command
         $server = IoServer::factory(
             new HttpServer(
                 new WsServer(
-                    new GameMain()
+                    new Main()
                 )
             ),
             $port
